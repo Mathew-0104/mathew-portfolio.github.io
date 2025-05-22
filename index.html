@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathew J - Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; }
+    .slide { display: none; padding: 40px; background: white; max-width: 800px; margin: 50px auto; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    .active { display: block; }
+    img { max-width: 200px; border-radius: 10px; }
+    button { margin: 10px; padding: 10px 20px; }
+  </style>
+</head>
+<body>
+
+<div class="slide active" id="slide1">
+  <h1>Mathew J</h1>
+  <h2>Data Science</h2>
+  <img src="https://github.com/Mathew-0104/mathew-portfolio.github.io/blob/main/Profile_Pic.jpg?raw=true" alt="Profile Photo" />
+  <p><strong>About Me:</strong> Data Analyst with 3+ years of experience in transforming complex data into actionable insights. Looking to leverage strong analytical and visualization skills to drive business performance.</p>
+</div>
+
+<div class="slide" id="slide2">
+  <h2>Skills</h2>
+  <p><strong>Technical Skills:</strong> Python (pandas, NumPy)</p>
+  <p><strong>Data Visualization:</strong> Power BI</p>
+  <p><strong>Database Management:</strong> MySQL, PostgreSQL, Oracle</p>
+  <p><strong>Scripting & Automation:</strong> Python scripting for ETL and data cleaning</p>
+</div>
+
+<div class="slide" id="slide3">
+  <h2>Project: YouTube Harvest</h2>
+  <p><strong>About:</strong> Extract data from YouTube using API</p>
+  <img src="https://github.com/Mathew-0104/portfolio/blob/main/yt.png?raw=true" alt="YouTube Dashboard" />
+  <p><a href="https://github.com/Mathew-0104/YouTube-Data-Harvesting-and-Warehousing" target="_blank">View Project</a></p>
+</div>
+
+<div class="slide" id="slide4">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> test@gmail.com</p>
+  <p><strong>Phone:</strong> +91 82487515</p>
+  <p><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/" target="_blank">Profile</a></p>
+</div>
+
+<div style="text-align:center;">
+  <button onclick="showSlide(-1)">Previous</button>
+  <button onclick="showSlide(1)">Next</button>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  function showSlide(n) {
+    slides[slideIndex].classList.remove('active');
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides[slideIndex].classList.add('active');
+  }
+</script>
+
+</body>
+</html>
