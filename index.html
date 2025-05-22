@@ -15,6 +15,7 @@
       background-attachment: fixed;
       background-position: center;
     }
+
     .slide {
       display: none;
       padding: 40px;
@@ -24,24 +25,41 @@
       border-radius: 10px;
       box-shadow: 0 0 10px #444;
     }
+
     .active {
       display: block;
     }
+
     img.profile {
       max-width: 200px;
       border-radius: 10px;
     }
+
+    /* Navigation buttons container */
     .nav-buttons {
-      text-align: center;
-      margin-top: 20px;
+      position: fixed;
+      top: 50%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none; /* allows clicks only on buttons */
     }
+
     .nav-buttons img {
       width: 50px;
       height: 50px;
-      margin: 10px;
+      margin: 0 10px;
       cursor: pointer;
       transition: transform 0.3s ease;
+      pointer-events: all; /* re-enable pointer events on buttons */
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px;
+      border-radius: 50%;
     }
+
     .nav-buttons img:hover {
       transform: scale(1.1);
     }
@@ -49,6 +67,7 @@
 </head>
 <body>
 
+<!-- Slide 1: Introduction -->
 <div class="slide active" id="slide1">
   <h1>Mathew J</h1>
   <h2>Data Science</h2>
@@ -56,6 +75,7 @@
   <p><strong>About Me:</strong> Data Analyst with 3+ years of experience in transforming complex data into actionable insights. Looking to leverage strong analytical and visualization skills to drive business performance.</p>
 </div>
 
+<!-- Slide 2: Skills -->
 <div class="slide" id="slide2">
   <h2>Skills</h2>
   <p><strong>Technical Skills:</strong> Python (pandas, NumPy)</p>
@@ -64,6 +84,7 @@
   <p><strong>Scripting & Automation:</strong> Python scripting for ETL and data cleaning</p>
 </div>
 
+<!-- Slide 3: Project -->
 <div class="slide" id="slide3">
   <h2>Project: YouTube Harvest</h2>
   <p><strong>About:</strong> Extract data from YouTube using API</p>
@@ -71,6 +92,7 @@
   <p><a href="https://github.com/Mathew-0104/YouTube-Data-Harvesting-and-Warehousing" target="_blank" style="color: #4faaff;">View Project</a></p>
 </div>
 
+<!-- Slide 4: Contact -->
 <div class="slide" id="slide4">
   <h2>Contact</h2>
   <p><strong>Email:</strong> test@gmail.com</p>
@@ -78,11 +100,13 @@
   <p><strong>LinkedIn:</strong> <a href="https://in.linkedin.com/" target="_blank" style="color: #4faaff;">Profile</a></p>
 </div>
 
+<!-- Navigation Buttons -->
 <div class="nav-buttons">
   <img src="https://github.com/Mathew-0104/mathew-portfolio.github.io/blob/main/left.png?raw=true" alt="Previous" onclick="showSlide(-1)" />
   <img src="https://github.com/Mathew-0104/mathew-portfolio.github.io/blob/main/right.png?raw=true" alt="Next" onclick="showSlide(1)" />
 </div>
 
+<!-- JavaScript for Slide Navigation -->
 <script>
   let slideIndex = 0;
   const slides = document.querySelectorAll('.slide');
