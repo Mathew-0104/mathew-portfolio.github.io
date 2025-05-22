@@ -20,7 +20,7 @@
       display: none;
       padding: 40px;
       background: rgba(26, 26, 26, 0.85);
-      max-width: 800px;
+      max-width: 900px;
       margin: 50px auto;
       border-radius: 10px;
       box-shadow: 0 0 10px #444;
@@ -35,6 +35,19 @@
       border-radius: 10px;
     }
 
+    /* Introduction layout */
+    .intro-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
     /* Navigation buttons container */
     .nav-buttons {
       position: fixed;
@@ -45,7 +58,7 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
-      pointer-events: none; /* allows clicks only on buttons */
+      pointer-events: none;
     }
 
     .nav-buttons img {
@@ -54,7 +67,7 @@
       margin: 0 10px;
       cursor: pointer;
       transition: transform 0.3s ease;
-      pointer-events: all; /* re-enable pointer events on buttons */
+      pointer-events: all;
       background: rgba(0, 0, 0, 0.4);
       padding: 10px;
       border-radius: 50%;
@@ -69,10 +82,14 @@
 
 <!-- Slide 1: Introduction -->
 <div class="slide active" id="slide1">
-  <h1>Mathew J</h1>
-  <h2>Data Science</h2>
-  <img class="profile" src="https://github.com/Mathew-0104/mathew-portfolio.github.io/blob/main/349.jpg?raw=true" alt="Profile Photo" />
-  <p><strong>About Me:</strong> Data Analyst with 3+ years of experience in transforming complex data into actionable insights. Looking to leverage strong analytical and visualization skills to drive business performance.</p>
+  <div class="intro-container">
+    <img class="profile" src="https://github.com/Mathew-0104/mathew-portfolio.github.io/blob/main/349.jpg?raw=true" alt="Profile Photo" />
+    <div class="about-text">
+      <h1>Mathew J</h1>
+      <h2>Data Science</h2>
+      <p><strong>About Me:</strong> Data Analyst with 3+ years of experience in transforming complex data into actionable insights. Looking to leverage strong analytical and visualization skills to drive business performance.</p>
+    </div>
+  </div>
 </div>
 
 <!-- Slide 2: Skills -->
